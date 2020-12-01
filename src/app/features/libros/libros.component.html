@@ -1,0 +1,25 @@
+<div class="row">
+    <h2 class="titulo">Libros</h2>
+</div>
+<div class="row" style="float: left;">
+    <div *ngFor="let libros of librosModel.libros" class="card" style="width: 13rem;" 
+    (click)="verLibrosDetalles(libros)"
+    data-toggle="modal" data-target="#exampleModal">
+        <img class="card-img-top" src='{{libros.image}}' alt="">
+        <div  class="card-body" >
+            <h5 class="card-title">{{libros.nombre}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{libros.genero}}</h6>
+            <p> L. {{libros.precio}}</p>
+
+        </div>
+        <div class="row">
+            <span> L. {{libros.precio}}</span>
+        </div>
+    </div>  
+</div>
+<div class="container">
+    <librossDetail *ngIf="librosDetail" [libros]='librosDetail'></librossDetail>
+</div>
+
+
+

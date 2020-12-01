@@ -1,0 +1,25 @@
+<div class="row">
+    <h2 class="titulo">Peliculas</h2>
+</div>
+<div class="row" style="float: left;">
+    <div *ngFor="let pelis of pelisModel.pelis" class="card" style="width: 13rem;" 
+    (click)="verPelisDetalles(pelis)"
+    data-toggle="modal" data-target="#exampleModal">
+        <img class="card-img-top" src='{{pelis.image}}' alt="">
+        <div  class="card-body" >
+            <h5 class="card-title">{{pelis.nombre}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{pelis.genero}}</h6>
+            <p> L. {{pelis.precio}}</p>
+
+        </div>
+        <div class="row">
+            <span> L. {{pelis.precio}}</span>
+        </div>
+    </div>  
+</div>
+<div class="container">
+    <detallePelis *ngIf="pelisDetail" [pelis]='pelisDetail'></detallePelis>
+</div>
+
+
+
