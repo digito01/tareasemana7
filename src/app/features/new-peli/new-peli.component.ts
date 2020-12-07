@@ -21,7 +21,8 @@ export class NewPeliComponent {
   save(): void {
     if (this.validate(this.peli)) {
       let result = this.peliculaDataService.addNewPeli(this.peli);
-      if (result) console.log('Saved success!');
+      if (result) {
+        console.log('Saved success!')}
       else {
         console.log('error in save :(');
       }
