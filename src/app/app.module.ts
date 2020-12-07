@@ -17,7 +17,7 @@ import { LibrosDataService } from './common/services/libros-data.service';
 import { AppsDataService } from './common/services/apps-data.service';
 import { AppsDetalles } from './features/app-detalle/app-detalle.component';
 import { NewlibroComponent } from './features/new-libro/new-libro.component';
-
+import {NewAppComponent} from './features/new-app/new-app.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,6 +29,7 @@ import { NewlibroComponent } from './features/new-libro/new-libro.component';
     AppsDetalles,
     LibroDetailComponent,
 
+    NewAppComponent,
     NewPeliComponent,
     NewlibroComponent,
   ],

@@ -1,0 +1,31 @@
+<form>
+    <div class="form-group">
+        <label for="app-nombre">Nombre de app </label>
+        <input type="text" class="form-control" id="app-nombre" name="nombre" placeholder="nombre"
+            [(ngModel)]="app.nombre"
+            (keyup)="printConsole()">
+    </div>
+    <div class="form-group">
+        <label for="app-precio"> Precio</label>
+        <input type="text" class="form-control" id="app-precio" name="precio" placeholder="precio"
+            [(ngModel)]="app.precio"
+            >
+    </div>
+    <div class="form-group">
+        <label for="app-genero">Genero</label>
+        <input type="text" class="form-control" id="app-genero" name="genero" placeholder="genero"
+            [(ngModel)]="app.genero"
+            >
+    </div>
+  
+    <div class="form-group">
+        <label for="app-image">app image</label>
+        <input type="text" class="form-control" id="app-image" name="image" placeholder="image"
+            [(ngModel)]="app.image"
+            >
+    </div>
+    
+    <button type="button" 
+    class="btn btn-primary"
+    (click)="save()">Save</button>
+</form>
