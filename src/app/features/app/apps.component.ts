@@ -1,24 +1,27 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { App } from 'src/app/common/models/apps/app.model';
-import { APP_DATA } from '../../common/models/mocks/apps-data.mock';
-import { ActivatedRoute } from '@angular/router';
-import { Apps } from 'src/app/common/models/apps/apps.model';
+import { Component,OnInit} from '@angular/core';
+import { Router } from '@angular/router';
+import{AppsDataService} from 'src/app/common/services/apps-data.service'
+
 
 @Component({
   selector: 'apps',
   templateUrl: './apps.component.html',
 })
-export class AppsComponent implements OnInit {
-  data: Apps = APP_DATA;
-  app: App;
+export class AppsComponent implements OnInit{
 
+  appsDetail: any;
+  appsModel: any ;
   
-    constructor(private activedRoute: ActivatedRoute) {}
-    ngOnInit(): void {
-      const id = Number.parseInt(this.activedRoute.snapshot.paramMap.get('id'));
-      console.log(id);
-      this.app = this.data.apps.find((t) => t.id === id);
-      console.log(this.app);
-    }
+  constructor(
+    private router: Router,
+    private appsDataService: AppsDataService
+  ) {}
+  ngOnInit(): void {
+    this.appsModel = this.appsDataService.getAllApps();
   }
+
+  viewAppsDetail(app: any): void {
+    this.router.navigate(['/app', app.id]);
+  }
+}
 

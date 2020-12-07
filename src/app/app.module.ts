@@ -17,11 +17,12 @@ import {NewPeliComponent} from './features/new-peli/new-peli.component'
 import { LibrosDataService } from './common/services/libros-data.service';
 import { AppsDataService } from './common/services/apps-data.service';
 import{AppsDetalles}from './features/app-detalle/app-detalle.component'
+import{NewlibroComponent}from './features/new-libro/new-libro.component'
 
 @NgModule({
   declarations: [
     AppComponent, 
-    PelisComponent,PeliDetailComponent,NewPeliComponent,AppsDetalles,
+    PelisComponent,PeliDetailComponent,NewPeliComponent,AppsDetalles,NewlibroComponent,
     LibrosComponent,LibroDetailComponent,AppsDetailComponent,AppsComponent
     ],
   imports: [
