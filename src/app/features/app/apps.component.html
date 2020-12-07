@@ -1,0 +1,25 @@
+<div class="row">
+    <br />
+    <h2 class="titulo">apps</h2>
+  </div>
+  <div class="row" style="float: left">
+    <div
+      *ngFor="let app of appsModel.apps"
+      (click)="viewAppsDetail(app)"
+      class="card"
+      style="width: 13rem"
+      data-toggle="modal"
+      data-target="#exampleModal"
+    >
+      <img class="card-img-top" src="{{ app.image }}" alt="" />
+      <div class="card-body">
+        <h5 class="card-title">{{ app.nombre }}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">{{ app.genero }}</h6>
+        <p>L. {{ app.precio }}</p>
+      </div>
+      <div class="row">
+        <span> L. {{ app.precio }}</span>
+      </div>
+    </div>
+  </div>
+  

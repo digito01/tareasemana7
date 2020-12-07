@@ -1,10 +1,14 @@
 import {NgModule} from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AppsComponent } from './appss/apps.component';
+import { AppsComponent } from './app/apps.component';
 import{LibrosComponent} from './libros/libros.component';
 import{PelisComponent} from './peliculas/peliculas.component';
 import{PeliDetailComponent} from'../features/pelicula-detalle/pelicula-detalle.component'
-import { NewPeliComponent} from'./new-peli/new-peli.component'
+import { NewPeliComponent} from'./new-peli/new-peli.component';
+import{LibroDetailComponent} from'../features/libro-detalle/libro-detalle.component'
+import {NewlibroComponent} from './new-libro/new-libro.component'
+import{AppsDetalles} from './app-detalle/app-detalle.component'
+
 const routes :Routes =[
 
     {
@@ -28,10 +32,25 @@ const routes :Routes =[
         component: NewPeliComponent,
       },
       {
+        path: 'libro/:id',
+        component: LibroDetailComponent,
+      },
+
+      {
         path: '',
         redirectTo: '/peliculas',
         pathMatch: 'full',
       },
+      {
+        path: 'new-libro',
+        component: NewlibroComponent,
+      },
+      {
+        path: 'app/:id',
+        component: AppsDetalles,
+      },
+
+      
 
       
 

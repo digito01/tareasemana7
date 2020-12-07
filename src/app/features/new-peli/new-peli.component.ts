@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { Peli } from 'src/app/common/models/pelis.model';
-import { PeliculaDataService } from 'src/app/common/services/album-data.service';
+import { PeliculaDataService } from 'src/app/common/services/peliculas-data.service';
 
 @Component({
-  selector: 'new-song',
+  selector: 'new-peli',
   templateUrl: './new-peli.component.html',
 })
 export class NewPeliComponent {

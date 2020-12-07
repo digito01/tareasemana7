@@ -1,13 +1,13 @@
 import { Component,OnInit} from '@angular/core';
 import { Router } from '@angular/router';
-import{PeliculaDataService} from 'src/app/common/services/album-data.service'
+import{PeliculaDataService} from 'src/app/common/services/peliculas-data.service'
 
 
 @Component({
   selector: 'peliculas',
   templateUrl: './peliculas.component.html',
-  styleUrls: ['./peliculas.component.scss'],
 })
+
 export class PelisComponent implements OnInit{
   pelisDetail: any;
   pelisModel: any ;

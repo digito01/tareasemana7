@@ -7,20 +7,16 @@ import { Peli } from '../models/pelis.model';
 export class PeliculaDataService {
   constructor() {}
 
-  // 1. get all data
   getAllPeliculas(): Peliculas {
     return PELI_DATA;
   }
 
-  // 2. find song by id (num)
-  getSongById(id: number): Peli {
+  getPeliById(id: number): Peli {
     return PELI_DATA.peliculas.find((t) => t.id === id);
   }
 
-  // // 3. add new song to data
   addNewPeli(peli: Peli): boolean {
-    // buscar dentro de ALBUM_DATA la última song
-    // -: obtendremos el id de la ultima son
+  
     try {
       let lastId =
       PELI_DATA.peliculas.length === 0
