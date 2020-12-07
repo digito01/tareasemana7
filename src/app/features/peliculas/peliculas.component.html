@@ -3,24 +3,27 @@
     <h2 class="titulo">Peliculas</h2>
 </div>
 <div class="row" style="float: left;">
-    <div *ngFor="let pelis of pelisModel.pelis" class="card" style="width: 13rem;" 
-    (click)="verPelisDetalles(pelis)"
+    <div *ngFor="let peli of pelisModel.peliculas" (click)="viewPelisDetail(peli)" class="card" style="width: 13rem;" 
+    
     data-toggle="modal" data-target="#exampleModal">
-        <img class="card-img-top" src='{{pelis.image}}' alt="">
+        <img class="card-img-top" src='{{peli.image}}' alt="">
         <div  class="card-body" >
-            <h5 class="card-title">{{pelis.nombre}}</h5>
-            <h6 class="card-subtitle mb-2 text-muted">{{pelis.genero}}</h6>
-            <p> L. {{pelis.precio}}</p>
+            <h5 class="card-title">{{peli.nombre}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{peli.genero}}</h6>
+            <p> L. {{peli.precio}}</p>
 
         </div>
         <div class="row">
-            <span> L. {{pelis.precio}}</span>
+            <span> L. {{peli.precio}}</span>
         </div>
     </div>  
 </div>
-<div class="container">
-    <detallePelis *ngIf="pelisDetail" [pelis]='pelisDetail'></detallePelis>
-</div>
+<!-- <div >
+    <div scope="row">{{peli.id}}</div>
+    <div><a [routerLink]="['/peli', peli.id]">{{peli.nombre}}</a></div>
+    <div>{{peli.genero}}</div> -->
+<!-- </div> -->
+
 
 
 

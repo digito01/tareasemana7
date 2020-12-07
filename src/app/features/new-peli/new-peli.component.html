@@ -1,0 +1,36 @@
+<form>
+    <div class="form-group">
+        <label for="peli-nombre">Pelicula nombre</label>
+        <input type="text" class="form-control" id="peli-nombre" name="nombre" placeholder="nombre"
+            [(ngModel)]="peli.nombre"
+            (keyup)="printConsole()">
+    </div>
+    <div class="form-group">
+        <label for="peli-nombre">Pelicula precio</label>
+        <input type="number" class="form-control" id="peli-precio" name="precio" placeholder="precio"
+            [(ngModel)]="peli.precio"
+            >
+    </div>
+    <div class="form-group">
+        <label for="peli-genero">Pelicula genero</label>
+        <input type="text" class="form-control" id="peli-genero" name="genero" placeholder="genero"
+            [(ngModel)]="peli.genero"
+            >
+    </div>
+    <div class="form-group">
+        <label for="peli-relacion">Pelicula description</label>
+        <input type="text" class="form-control" id="peli-relacion" name="relacion" placeholder="relacion"
+            [(ngModel)]="peli.relacion"
+            >
+    </div>
+    <div class="form-group">
+        <label for="peli-image">Pelicula image</label>
+        <input type="text" class="form-control" id="peli-image" name="image" placeholder="image"
+            [(ngModel)]="peli.image"
+            >
+    </div>
+    
+    <button type="button" 
+    class="btn btn-primary"
+    (click)="save()">Save</button>
+</form>
