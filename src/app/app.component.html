@@ -1,6 +1,3 @@
-
-
-
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">Inicio</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -8,12 +5,12 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-item nav-link active" href="/peliculas">Peliculas <span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" href="/apps">App</a>
-      <a class="nav-item nav-link" href="/libros">Libros</a>
-      <a class="nav-item nav-link" href="/new-peli">Nueva Pelicula</a>
-      <a class="nav-item nav-link" href="/new-libro">Nueva libro</a>
-      <a class="nav-item nav-link" href="/new-app">Nueva app</a>
+      <a class="nav-item nav-link active" [routerLink]="['/peliculas']">Peliculas <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" [routerLink]="['/apps']">App</a>
+      <a class="nav-item nav-link" [routerLink]="['/libros']">Libros</a>
+      <a class="nav-item nav-link" [routerLink]="['/new-libro']">Nueva libro</a>
+      <a class="nav-item nav-link" [routerLink]="['/new-peli']">Nueva Pelicula</a>
+      <a class="nav-item nav-link" [routerLink]="['/new-app']">Nueva app</a>
     </div>
   </div>
 </nav>
